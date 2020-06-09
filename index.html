@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="蟹老宋,香辣蟹,小龙虾,烤鸭,新加坡,外卖"/>
+    <link href="assets/images/favicon/favicon.svg" rel="icon">
+    <title>XIELAOSONG</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kristi%7cPoppins:400,500,600,700%7cYeseva+One&display=swap">
+    <link rel="stylesheet" href="assets/css/libraries.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="assets/js/index.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-transparent header-layout1">
+        <nav class="navbar navbar-expand-lg sticky-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo/logo-light.svg" class="logo-light" alt="logo">
+                    <img src="assets/images/logo/logo-dark.svg" class="logo-dark" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button">
+                    <span class="menu-lines"><span></span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav__item with-dropdown">
+                            <a href="index.html" class="dropdown-toggle nav__item-link active" data-i18n="index"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="events.html" class="dropdown-toggle nav__item-link" data-i18n="events"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="shop.html" class="dropdown-toggle nav__item-link" data-i18n="shop"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="contacts.html" class="dropdown-toggle nav__item-link" data-i18n="contacts"></a>
+                        </li> <!-- /.nav-item -->
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+                <div class="navbar-actions-wrap">
+                    <div class="navbar-actions d-flex align-items-center">
+                        <a href="shopping-cart.html" class="navbar__action-btn navbar__action-btn-reserve btn"><i
+                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span></a>
+                        <button class="navbar__action-btn hamburger-menu-trigger" data-i18n="switchLang"
+                                onclick="switchLang()"></button>
+                    </div><!-- /.navbar-actions -->
+                </div><!-- /.navbar-actions-wrap -->
+            </div><!-- /.container -->
+        </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ========================
+    Slider
+    ============================== -->
+    <section id="slider" class="slider slider-layout1">
+        <div class="carousel owl-carousel carousel-arrows carousel-dots carousel-dots-light" data-slide="1"
+             data-slide-md="1" data-slide-sm="1" data-autoplay="true" data-nav="true" data-dots="true" data-space="0"
+             data-loop="true" data-speed="3000" data-transition="fade" data-animate-out="fadeOut"
+             data-animate-in="fadeIn">
+            <div class="slide-item align-v-h text-center bg-overlay">
+                <div class="bg-img"><img src="assets/images/backgrounds/bg.jpg" alt="slide img"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="slide__content">
+                                <h2 class="slide__title" data-i18n="slide__title01"></h2>
+                                <p class="slide__desc" data-i18n="slide__desc01"></p>
+                                <a href="menu-classic.html" class="btn btn__primary btn__hover2"
+                                   data-i18n="slide__btn01"></a>
+                                <a href="reservation.html" class="btn btn__white btn__bordered mx-2"
+                                   data-i18n="slide__btn02"></a>
+                            </div><!-- /.slide-content -->
+                        </div><!-- /.col-lg-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.slide-item -->
+            <div class="slide-item align-v-h text-center bg-overlay">
+                <div class="bg-img"><img src="assets/images/backgrounds/bg.jpg" alt="slide img"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12">
+                            <div class="slide__content">
+                                <h2 class="slide__title" data-i18n="slide__title02"></h2>
+                                <p class="slide__desc" data-i18n="slide__desc02"></p>
+                                <a href="menu-mixed.html" class="btn btn__primary mx-2" data-i18n="slide__btn01"></a>
+                                <a href="reservation.html" class="btn btn__white btn__bordered mx-2"
+                                   data-i18n="slide__btn02"></a>
+                            </div><!-- /.slide-content -->
+                        </div><!-- /.col-lg-12 -->
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </div><!-- /.slide-item -->
+        </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    <!-- =========================== 
+      features
+    ============================= -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2">
+                    <div class="heading heading-layout1 text-center mb-50">
+                        <span class="heading__subtitle">delicious</span>
+                        <h2 class="heading__title" data-i18n="heading__title"></h2>
+
+                    </div><!-- /.heading -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div class="row">
+                <!-- feature item #1 -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature__img">
+                            <img src="assets/images/features/1.jpg" alt="feature img">
+                        </div><!-- /.feature__img -->
+                        <div class="feature__content">
+                            <h4 class="feature__title" data-i18n="feature__title01"></h4>
+                        </div><!-- /.feature__content-->
+                    </div><!-- /.feature-item -->
+                </div><!-- /.col-lg-4 -->
+                <!-- feature item #2 -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature__img">
+                            <img src="assets/images/features/2.jpg" alt="feature img">
+                        </div><!-- /.feature__img -->
+                        <div class="feature__content">
+                            <h4 class="feature__title" data-i18n="feature__title02"></h4>
+                        </div><!-- /.feature__content-->
+                    </div><!-- /.feature-item -->
+                </div><!-- /.col-lg-4 -->
+                <!-- feature item #3 -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="feature-item">
+                        <div class="feature__img">
+                            <img src="assets/images/features/3.jpg" alt="feature img">
+                        </div><!-- /.feature__img -->
+                        <div class="feature__content">
+                            <h4 class="feature__title" data-i18n="feature__title03"></h4>
+                        </div><!-- /.feature__content-->
+                    </div><!-- /.feature-item -->
+                </div><!-- /.col-lg-4 -->
+            </div><!-- /.row -->
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
+                    <a class="btn btn__secondary btn__link" href="our-story.html" data-i18n="btn__link"></a>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.features -->
+
+
+    <!-- ========================
+      Reservation
+    =========================== -->
+    <section class="reservation-layout2 bg-overlay bg-parallax">
+        <div class="bg-img"><img src="assets/images/backgrounds/bg01.jpg" alt="background"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="reservation-container">
+                        <div class="reservation__banner" data-aos="fade-right">
+                            <img class="reservation__banner-img" src="assets/images/backgrounds/pattern/3.jpg"
+                                 alt="background">
+                            <div class="reservation__banner-inner">
+                                <span class="reservation__banner-inner-subtitle">蟹老宋</span>
+                                <h5 class="reservation__banner-inner-title" data-i18n="reservation__title"></h5>
+                                <ul class="list-unstyled">
+                                    <li><span>工作日</span><span>10:00AM – 24:00PM</span></li>
+                                    <li><span>周六</span><span>09:00AM – 24:00PM</span></li>
+                                    <li><span>周日</span><span>09:00AM – 24:00PM</span></li>
+                                </ul>
+                                <div class="reservation__banner-contact">
+                                    <span class="reservation__banner-contact-label">联系电话</span>
+                                    <a class="reservation__banner-contact-phone" href="tel:+6562250158">TELL:+65 6225
+                                        0158</a>
+                                </div><!-- /.reservation__banner-contact -->
+                            </div><!-- /.reservation__banner-inner -->
+                        </div><!-- /.reservation__banner -->
+                        <form class="reservation__form" data-aos="fade-left">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <p data-i18n="reservation__form"></p>
+                                </div><!-- /.col-lg-12 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option value="2">2 people</option>
+                                            <option value="3">3 people</option>
+                                            <option value="4">4 people</option>
+                                            <option value="5">5 people</option>
+                                            <option value="6">6 people</option>
+                                            <option value="7">7 people</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option value="23">March 23, 2020</option>
+                                            <option value="24">March 24, 2020</option>
+                                            <option value="25">March 25, 2020</option>
+                                            <option value="26">March 26, 2020</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option value="8">8:00 PM</option>
+                                            <option value="9">9:00 PM</option>
+                                            <option value="10">10:00 PM</option>
+                                            <option value="11">11:00 PM</option>
+                                        </select>
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" data-i18n
+                                               data-i18n-placeholder="placeholder_name">
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" data-i18n
+                                               data-i18n-placeholder="placeholder_tell">
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" data-i18n
+                                               data-i18n-placeholder="placeholder_position">
+                                    </div>
+                                </div><!-- /.col-lg-4 -->
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" data-i18n
+                                               data-i18n-placeholder="placeholder_remarks">
+                                    </div>
+                                </div><!-- /.col-lg-12 -->
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <button type="submit" class="btn btn__secondary btn__block"
+                                            data-i18n="slide__btn02"></button>
+                                </div><!-- /.col-lg-12 -->
+                            </div><!-- /.row -->
+                        </form><!-- /.reservation__form -->
+                    </div><!-- /.reservation-container -->
+                </div><!-- /.col-lg-12 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.Reservation -->
+
+    <!-- ======================
+      Blog Grid
+    ========================= -->
+    <section class="blog blog-grid pb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3">
+                    <div class="heading heading-latout1 text-center mb-50">
+                        <span class="heading__subtitle">Don’t Miss</span>
+                        <h2 class="heading__title" data-i18n="events"></h2>
+                    </div><!-- /.heading -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+            <div id="news-grids" class="row">
+
+            </div>
+        </div><!-- /.container -->
+    </section><!-- /.blog Grid -->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer footer-layout1 text-center bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class=" col-sm-12 col-md-12 col-lg-4">
+                        <div class="contact-box">
+                            <h6 class="contact__box-title" data-i18n="contact__address"></h6>
+                            <ul class="contact__box-list list-unstyled">
+                                <li>chinatown 16 Smith Street, Singapore 058930</li>
+                            </ul>
+                        </div><!-- /.contact-box -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <img src="assets/images/logo/footer-logo.svg" alt="logo" class="footer__logo mb-20"
+                             style="height: 60px;">
+                        <p class="mx-2 mb-20" data-i18n="introduction"></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="contact-box">
+                            <h6 class="contact__box-title" data-i18n="contact__information"></h6>
+                            <ul class="contact__box-list list-unstyled">
+                                <li><span data-i18n="contact__email"></span> <a href="mailto:xielaosong.com">xielaosong.com</a>
+                                </li>
+                                <li><span data-i18n="contact__tell"></span> <a href="tel:+65 62250158">+65 6225 0158</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.contact-box -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.footer-top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <nav class="footer__links">
+                            <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+                                <li><a href="#" data-i18n="index"></a></li>
+                                <li><a href="#" data-i18n="events"></a></li>
+                                <li><a href="#" data-i18n="shop"></a></li>
+                                <li><a href="#" data-i18n="contacts"></a></li>
+                                <li><a href="#" data-i18n="cart"></a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__copyright">
+                            <span>Copyright © 2020. </span>
+                            <a href="#" class="color-theme">xielaosong</a>
+                            <span>All rights reserved. </span>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.Footer-bottom -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
+
+</div><!-- /.wrapper -->
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/api.js"></script>
+<script>
+    indexList()
+</script>
+</body>
+
+</html>

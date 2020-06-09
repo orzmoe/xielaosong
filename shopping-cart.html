@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content="">
+    <meta name="keywords" content="蟹老宋,香辣蟹,小龙虾,烤鸭,新加坡,外卖"/>
+    <link href="assets/images/favicon/favicon.svg" rel="icon">
+    <title>XIELAOSONG-CART</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Kristi%7cPoppins:400,500,600,700%7cYeseva+One&display=swap">
+    <link rel="stylesheet" href="assets/css/libraries.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+    <script src="assets/js/index.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-layout2">
+        <nav class="navbar navbar-expand-lg sticky-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo/logo-light.svg" class="logo-light" alt="logo">
+                    <img src="assets/images/logo/logo-dark.svg" class="logo-dark" alt="logo">
+                </a>
+                <button class="navbar-toggler" type="button">
+                    <span class="menu-lines"><span></span></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNavigation">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav__item with-dropdown">
+                            <a href="index.html" class="dropdown-toggle nav__item-link" data-i18n="index"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="events.html" class="dropdown-toggle nav__item-link" data-i18n="events"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="shop.html" class="dropdown-toggle nav__item-link" data-i18n="shop"></a>
+                        </li>
+                        <li class="nav__item with-dropdown">
+                            <a href="contacts.html" class="dropdown-toggle nav__item-link" data-i18n="contacts"></a>
+                        </li> <!-- /.nav-item -->
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+                <div class="navbar-actions-wrap">
+                    <div class="navbar-actions d-flex align-items-center">
+                        <a href="shopping-cart.html" class="navbar__action-btn navbar__action-btn-reserve btn"><i
+                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span></a>
+                        <button class="navbar__action-btn hamburger-menu-trigger" data-i18n="switchLang"
+                                onclick="switchLang()"></button>
+                    </div><!-- /.navbar-actions -->
+                </div><!-- /.navbar-actions-wrap -->
+            </div><!-- /.container -->
+        </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+
+    <!-- ========================
+       page title 
+    =========================== -->
+    <section id="page-title" class="page-title page-title-layout8">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <h1 class="pagetitle__heading color-dark" data-i18n="cart"></h1>
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-end">
+                            <li class="breadcrumb-item"><a href="index.html" data-i18n="index"></a></li>
+                            <li class="breadcrumb-item active" aria-current="page" data-i18n="cart"></li>
+                    </nav>
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.page-title -->
+
+    <!-- =========================
+				Shopping Cart
+		=========================== -->
+    <section class="shopping-cart pb-70">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="cart-table table-responsive bg-gray">
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                                <th data-i18n="table_dish"></th>
+                                <th data-i18n="table_price"></th>
+                                <th data-i18n="table_quantity"></th>
+                                <th data-i18n="table_total"></th>
+                                <th data-i18n="table_operating"></th>
+                            </tr>
+                            </thead>
+                            <tbody id="cart_list">
+                            </tbody>
+                            <tbody>
+                               <!-- <tr class="cart__product ">
+                                    <td class="cart__product-item">
+                                        <div class="cart__product-img">
+                                            <img src="assets/images/shop/grid/1.jpg" alt="product"/>
+                                        </div>
+                                        <div class="cart__product-title">
+                                            <h6>Roast Sea Trout</h6>
+                                        </div>
+                                    </td>
+                                    <td class="cart__product-price">$ 10.00</td>
+                                    <td class="cart__product-quantity">
+                                        <div class="product-quantity">
+                                            <div class="quantity__input-wrap">
+                                                <i class="fa fa-minus decrease-qty"></i>
+                                                <input type="number" value="1" class="qty-input">
+                                                <i class="fa fa-plus increase-qty"></i>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__product-total">$ 10.00</td>
+                                    <td class="cart__product-operating">
+                                        <div class="cart__product-remove">
+                                            <i class="fa fa-close"></i>
+                                        </div>
+                                    </td>
+                                </tr>-->
+
+
+
+                            <tr class="cart__product-action">
+                                <td colspan="5">
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-12 col-lg-12 cart__product-action-content">
+                                            <a class="btn btn__secondary mr-10" href="#" data-i18n="cart_clear"></a>
+                                            <div>
+                                                <a class="btn btn__primary" href="#" data-i18n="cart_checkout"></a>
+                                            </div>
+                                        </div><!-- /.col-lg-2  -->
+                                    </div><!-- /.row  -->
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div><!-- /.cart-table -->
+                </div><!-- /.col-lg-12 -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="cart__total-amount">
+                        <h6 data-i18n="cart_information"></h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><span data-i18n="cart_amount" ></span><span id="money"></span></li>
+                            <li><span>GST</span><span id="tax"></span></li>
+                            <li><span data-i18n="cart_freight"></span><span id="ship"></span></li>
+                            <li><span data-i18n="cart_total" ></span><span id="total"></span></li>
+                        </ul>
+                    </div><!-- /.cart__total-amount -->
+                </div><!-- /.col-lg-6 -->
+
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="cart__shiping">
+                        <h6 data-i18n="shop_information"></h6>
+                        <form class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="placeholder_name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="placeholder_name">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="placeholder_people">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="placeholder_time">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="contact__address">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Code">
+                            </div>
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" data-i18n
+                                       data-i18n-placeholder="placeholder_remarks">
+                            </div>
+                        </form>
+                    </div><!-- /.cart__shiping -->
+                </div><!-- /.col-lg-6 -->
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="cart__total-amount">
+                        <h6 data-i18n="pay_information"></h6>
+                        <ul class="list-unstyled mb-0">
+                            <li><span>paynow</span><span>$ 140.00</span></li>
+                        </ul>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn__secondary btn__block" data-i18n="submit">Update
+                                Totals
+                            </button>
+                        </div>
+                    </div><!-- /.cart__total-amount -->
+                </div><!-- /.col-lg-6 -->
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section><!-- /.shopping-cart -->
+
+    <!-- ========================
+      Footer
+   ========================== -->
+    <footer class="footer footer-layout1 text-center bg-dark">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class=" col-sm-12 col-md-12 col-lg-4">
+                        <div class="contact-box">
+                            <h6 class="contact__box-title" data-i18n="contact__address"></h6>
+                            <ul class="contact__box-list list-unstyled">
+                                <li>chinatown 16 Smith Street, Singapore 058930</li>
+                            </ul>
+                        </div><!-- /.contact-box -->
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <img src="assets/images/logo/footer-logo.svg" alt="logo" class="footer__logo mb-20"
+                             style="height: 60px;">
+                        <p class="mx-2 mb-20" data-i18n="introduction"></p>
+                    </div><!-- /.col-lg-4 -->
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="contact-box">
+                            <h6 class="contact__box-title" data-i18n="contact__information"></h6>
+                            <ul class="contact__box-list list-unstyled">
+                                <li><span data-i18n="contact__email"></span> <a href="mailto:xielaosong.com">xielaosong.com</a>
+                                </li>
+                                <li><span data-i18n="contact__tell"></span> <a href="tel:+65 62250158">+65 6225 0158</a>
+                                </li>
+                            </ul>
+                        </div><!-- /.contact-box -->
+                    </div><!-- /.col-lg-4 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.footer-top -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <nav class="footer__links">
+                            <ul class="list-unstyled d-flex flex-wrap justify-content-center">
+                                <li><a href="#" data-i18n="index"></a></li>
+                                <li><a href="#" data-i18n="events"></a></li>
+                                <li><a href="#" data-i18n="shop"></a></li>
+                                <li><a href="#" data-i18n="contacts"></a></li>
+                                <li><a href="#" data-i18n="cart"></a></li>
+                            </ul>
+                        </nav>
+                        <div class="footer__copyright">
+                            <span>Copyright © 2020. </span>
+                            <a href="#" class="color-theme">xielaosong</a>
+                            <span>All rights reserved. </span>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.Footer-bottom -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fa fa-angle-up"></i></button>
+
+
+</div><!-- /.wrapper -->
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/cart.js"></script>
+</body>
+<script>
+    getCartInfo()
+</script>
+
+</html>
