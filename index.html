@@ -50,7 +50,7 @@
                 <div class="navbar-actions-wrap">
                     <div class="navbar-actions d-flex align-items-center">
                         <a href="shopping-cart.html" class="navbar__action-btn navbar__action-btn-reserve btn"><i
-                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span></a>
+                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span><span class="count-style"></span></a>
                         <button class="navbar__action-btn hamburger-menu-trigger" data-i18n="switchLang"
                                 onclick="switchLang()"></button>
                     </div><!-- /.navbar-actions -->
@@ -75,9 +75,9 @@
                             <div class="slide__content">
                                 <h2 class="slide__title" data-i18n="slide__title01"></h2>
                                 <p class="slide__desc" data-i18n="slide__desc01"></p>
-                                <a href="menu-classic.html" class="btn btn__primary btn__hover2"
+                                <a href="shop.html" class="btn btn__primary btn__hover2"
                                    data-i18n="slide__btn01"></a>
-                                <a href="reservation.html" class="btn btn__white btn__bordered mx-2"
+                                <a href="#reservation" class="btn btn__white btn__bordered mx-2"
                                    data-i18n="slide__btn02"></a>
                             </div><!-- /.slide-content -->
                         </div><!-- /.col-lg-12 -->
@@ -91,9 +91,12 @@
                         <div class="col-sm-12 col-md-12 col-lg-12">
                             <div class="slide__content">
                                 <h2 class="slide__title" data-i18n="slide__title02"></h2>
-                                <p class="slide__desc" data-i18n="slide__desc02"></p>
-                                <a href="menu-mixed.html" class="btn btn__primary mx-2" data-i18n="slide__btn01"></a>
-                                <a href="reservation.html" class="btn btn__white btn__bordered mx-2"
+                                navbar__action-btn navbar__action-btn-reserve btn one-pan-link-mark     <p class="slide__desc" data-i18n="slide__desc02"></p>
+                                <a href="shop.html" class="btn btn__primary mx-2" data-i18n="slide__btn01">
+
+                                </a>
+
+                                <a href="#reservation" class="btn btn__white btn__bordered mx-2"
                                    data-i18n="slide__btn02"></a>
                             </div><!-- /.slide-content -->
                         </div><!-- /.col-lg-12 -->
@@ -154,7 +157,7 @@
             </div><!-- /.row -->
             <div class="row">
                 <div class="col-sm-12 col-md-12 col-lg-6 offset-lg-3 text-center">
-                    <a class="btn btn__secondary btn__link" href="our-story.html" data-i18n="btn__link"></a>
+                    <a class="btn btn__secondary btn__link" href="shop.html" data-i18n="btn__link"></a>
                 </div><!-- /.col-lg-6 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
@@ -164,7 +167,7 @@
     <!-- ========================
       Reservation
     =========================== -->
-    <section class="reservation-layout2 bg-overlay bg-parallax">
+    <section class="reservation-layout2 bg-overlay bg-parallax" id="reservation">
         <div class="bg-img"><img src="assets/images/backgrounds/bg01.jpg" alt="background"></div>
         <div class="container">
             <div class="row">
@@ -195,34 +198,20 @@
                                 </div><!-- /.col-lg-12 -->
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <select class="form-control">
-                                            <option value="2">2 people</option>
-                                            <option value="3">3 people</option>
-                                            <option value="4">4 people</option>
-                                            <option value="5">5 people</option>
-                                            <option value="6">6 people</option>
-                                            <option value="7">7 people</option>
-                                        </select>
+                                        <input type="text" class="form-control" data-i18n
+                                               data-i18n-placeholder="placeholder_people">
                                     </div>
                                 </div><!-- /.col-lg-4 -->
                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <select class="form-control">
-                                            <option value="23">March 23, 2020</option>
-                                            <option value="24">March 24, 2020</option>
-                                            <option value="25">March 25, 2020</option>
-                                            <option value="26">March 26, 2020</option>
-                                        </select>
+                                    <div class="form-group"> 
+                                            <input type="text" class="form-control" data-i18n
+                                                   data-i18n-placeholder="placeholder_date">
                                     </div>
                                 </div><!-- /.col-lg-4 -->
                                 <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <select class="form-control">
-                                            <option value="8">8:00 PM</option>
-                                            <option value="9">9:00 PM</option>
-                                            <option value="10">10:00 PM</option>
-                                            <option value="11">11:00 PM</option>
-                                        </select>
+                                    <div class="form-group"> 
+                                           <input type="text" class="form-control" data-i18n
+                                                  data-i18n-placeholder="placeholder_time">
                                     </div>
                                 </div><!-- /.col-lg-4 -->
                                 <div class="col-sm-6">
@@ -345,6 +334,7 @@
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/api.js"></script>
+<script src="assets/js/cart.js"></script>
 <script>
     indexList()
 </script>

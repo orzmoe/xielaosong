@@ -95,7 +95,7 @@ function list() {
                     '                  \n' +
                     '                </div><!-- /.post-meta -->\n' +
                     '                <h4 class="post__title"><a href="event-single.html?id=' + data[i].id + '">' + data[i].title + '</a></h4>\n' +
-                    '                <a href="event-single.html?id=' + data[i].id + '" class="btn btn__link btn__secondary">Find Out More</a>\n' +
+                    '                <a href="event-single.html?id=' + data[i].id + '" class="btn btn__link btn__secondary" data-i18n="slide__btn03"></a>\n' +
                     '              </div><!-- /.post__content -->\n' +
                     '            </div><!-- /.post-item -->\n' +
                     '          </div>'
@@ -139,6 +139,7 @@ function getQueryString(name) {
     }
     return null;
 }
+
 //获取菜单
 function getMenu() {
     var lang = localStorage.getItem("lang")
@@ -167,7 +168,7 @@ function getMenu() {
             });
             $("#filter").html(classHtml);
             //testHtml += classHtml
-            testHtml =''
+            testHtml = ''
             var menuHtml = ''
             Object.keys(result.data.menu).forEach(function (key) {
                 var name = ""
@@ -178,18 +179,18 @@ function getMenu() {
                 }
 
 
-            /*    menuHtml += '<div class="col-md-2 col-sm-6 col-xs-12 gallery-item-wrapper artwork ' + result.data.menu[key].class_name_en + '">\n' +
-                    '                    <div class="gallery-item">\n' +
-                    '                        <div class="gallery-thumb">\n' +
-                    '                            <img src="' + result.data.menu[key].img + '" class="img-responsive" alt="1st gallery Thumb">\n' +
-                    '                        </div>\n' +
-                    '                    </div>\n' +
-                    '                    <div class="atbd_add"><a  onclick="addCart(' + result.data.menu[key].id + ',\'' + result.data.menu[key].img + '\')">+</a></div>\n' +
-                    '                    <div class="gallery-details">\n' +
-                    '                        <div class="editContent">\n' +
-                    '                            <h5>' + name + '</h5>\n' +
-                    '                            <div class="atbd">\n' +
-                    '                                <span class="atbd_orange">$' + result.data.menu[key].money / 100 + '</span>\n'*/
+                /*    menuHtml += '<div class="col-md-2 col-sm-6 col-xs-12 gallery-item-wrapper artwork ' + result.data.menu[key].class_name_en + '">\n' +
+                        '                    <div class="gallery-item">\n' +
+                        '                        <div class="gallery-thumb">\n' +
+                        '                            <img src="' + result.data.menu[key].img + '" class="img-responsive" alt="1st gallery Thumb">\n' +
+                        '                        </div>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="atbd_add"><a  onclick="addCart(' + result.data.menu[key].id + ',\'' + result.data.menu[key].img + '\')">+</a></div>\n' +
+                        '                    <div class="gallery-details">\n' +
+                        '                        <div class="editContent">\n' +
+                        '                            <h5>' + name + '</h5>\n' +
+                        '                            <div class="atbd">\n' +
+                        '                                <span class="atbd_orange">$' + result.data.menu[key].money / 100 + '</span>\n'*/
                 menuHtml += '<div class="col-sm-6 col-md-6 col-lg-3 mix ' + result.data.menu[key].class_name_en + '">\n' +
                     '                    <div class="product-item">\n' +
                     '                        <div class="product__img">\n' +
@@ -265,26 +266,26 @@ function getCartInfo() {
                 } else {
                     name = data.list[i].name
                 }
-               /* html += '<tr>\n' +
-                    '                                    <td class="product-thumbnail">\n' +
-                    '                                        <a href="#"><img src="' + data.list[i].img + '" alt=""></a>\n' +
-                    '                                    </td>\n' +
-                    '                                    <td class="product-name"><a href="#">' + name + '</a></td>\n' +
-                    '                                    <td class="product-price-cart"><span class="amount">$' + data.list[i].money / 100 + '</span></td>\n' +
-                    '                                    <td class="product-quantity">\n' +
-                    '                                        <div class="cart-plus-minus">\n' +
-                    '                                            <div class="dec qtybutton" onclick="subCartNum(\'' + data.list[i].id + '\')">-</div>\n' +
-                    '                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="' + data.num[i] + '">\n' +
-                    '                                            <div class="inc qtybutton" onclick="addCartNum(\'' + data.list[i].id + '\')">+</div>\n' +
-                    '                                        </div>\n' +
-                    '                                    </td>\n' +
-                    '                                    <td class="product-subtotal">$' + data.list[i].money * data.num[i] / 100 + '</td>\n' +
-                    '                                    <td class="product-remove">\n' +
-                    '                                        <a href="#" onclick="delCart(\'' + data.list[i].id + '\')"><i class="fa fa-times"></i></a>\n' +
-                    '                                    </td>\n' +
-                    '                                </tr>'*/
+                /* html += '<tr>\n' +
+                     '                                    <td class="product-thumbnail">\n' +
+                     '                                        <a href="#"><img src="' + data.list[i].img + '" alt=""></a>\n' +
+                     '                                    </td>\n' +
+                     '                                    <td class="product-name"><a href="#">' + name + '</a></td>\n' +
+                     '                                    <td class="product-price-cart"><span class="amount">$' + data.list[i].money / 100 + '</span></td>\n' +
+                     '                                    <td class="product-quantity">\n' +
+                     '                                        <div class="cart-plus-minus">\n' +
+                     '                                            <div class="dec qtybutton" onclick="subCartNum(\'' + data.list[i].id + '\')">-</div>\n' +
+                     '                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="' + data.num[i] + '">\n' +
+                     '                                            <div class="inc qtybutton" onclick="addCartNum(\'' + data.list[i].id + '\')">+</div>\n' +
+                     '                                        </div>\n' +
+                     '                                    </td>\n' +
+                     '                                    <td class="product-subtotal">$' + data.list[i].money * data.num[i] / 100 + '</td>\n' +
+                     '                                    <td class="product-remove">\n' +
+                     '                                        <a href="#" onclick="delCart(\'' + data.list[i].id + '\')"><i class="fa fa-times"></i></a>\n' +
+                     '                                    </td>\n' +
+                     '                                </tr>'*/
 
-                html+=' <tr class="cart__product ">\n' +
+                html += ' <tr class="cart__product ">\n' +
                     '                                <td class="cart__product-item">\n' +
                     '                                    <div class="cart__product-img">\n' +
                     '                                        <img src="' + data.list[i].img + '" alt="">\n' +
@@ -305,9 +306,9 @@ function getCartInfo() {
                     '                                </td>\n' +
                     '                                <td class="cart__product-total">$ ' + data.list[i].money * data.num[i] / 100 + '</td>\n' +
                     '                                <td class="cart__product-operating">\n' +
-                    '                                    <div class="cart__product-remove">\n' +
-                    '                                        <a href="#" onclick="delCart(\'' + data.list[i].id + '\')"><i class="fa fa-close" ></i></a>\n' +
-                    '                                    </div>\n' +
+                    '                                   <a href="#" onclick="delCart(\'' + data.list[i].id + '\')"> <div class="cart__product-remove">\n' +
+                    '                                        <i class="fa fa-close" ></i>\n' +
+                    '                                    </div></a>\n' +
                     '                                </td>\n' +
                     '                            </tr>'
             }
@@ -316,6 +317,68 @@ function getCartInfo() {
             $("#ship").html(data.ship);
             $("#money").html("$" + data.money / 100);
             $("#total").html("$" + data.total / 100);
+            $("#paynow_total").html("$" + data.total / 100);
+        }
+    });
+}
+
+
+function addOrder() {
+    var cart = localStorage.getItem("cart")
+    var cartInfo = {
+        ids: [],
+        num: {}
+    }
+    if (cart == null) {
+        cart = {
+            ids: [],
+            num: {}
+        }
+        cart = JSON.stringify(cart)
+    }
+    cart = JSON.parse(cart)
+    cartInfo.ids = cart.ids
+    cartInfo.lang = localStorage.getItem("lang")
+    for (var i = 0; i < cart.ids.length; i++) {
+        var obj = {
+            id: cart.ids[i],
+            num: cart.num[i]
+        }
+        cartInfo.num[i] = obj
+    }
+
+    //cartInfo = JSON.stringify(cartInfo)
+    var errMsg = ""
+    var code = $("input[name='code']").val() ? $("input[name='code']").val() : errMsg = "code不能为空"
+    var obj = {
+        phone: $("input[name='phone']").val() ? $("input[name='phone']").val() : errMsg = "电话不能为空",
+        name: $("input[name='name']").val() ? $("input[name='name']").val() : errMsg = "姓名不能为空",
+        address: $("input[name='address']").val() ? $("input[name='address']").val() : errMsg = "地址不能为空",
+        people: $("input[name='people']").val() ? $("input[name='people']").val() : errMsg = "用餐人数不能为空",
+        time: $("input[name='time']").val() ? $("input[name='time']").val() : errMsg = "送货时间不能为空",
+        remark: $("input[name='remark']").val() ? $("input[name='remark']").val() : "无",
+        cart: cartInfo,
+        pay_type: $("input[name='payment_method']:checked").val()
+    };
+    obj.address += code
+    obj = JSON.stringify(obj)
+    console.log($("select[name='time']").val())
+    if (errMsg != "") {
+        alert(errMsg)
+        return
+    }
+    $.ajax({
+        type: "post",
+        url: url + 'api/user/addOrder',
+        async: false,
+        data: obj,
+        contentType: "application/json; charset=utf-8",
+        dataType: "json",
+        success: function (data) {
+            console.log(data)
+            alert(data.message)
+            localStorage.setItem("cart", null)
+            window.location = "/"
         }
     });
 }

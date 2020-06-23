@@ -50,7 +50,7 @@
                 <div class="navbar-actions-wrap">
                     <div class="navbar-actions d-flex align-items-center">
                         <a href="shopping-cart.html" class="navbar__action-btn navbar__action-btn-reserve btn"><i
-                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span></a>
+                                class="fa fa-shopping-cart"></i><span data-i18n="cart"></span><span class="count-style"></span></a>
                         <button class="navbar__action-btn hamburger-menu-trigger" data-i18n="switchLang"
                                 onclick="switchLang()"></button>
                     </div><!-- /.navbar-actions -->
@@ -164,30 +164,39 @@
                         <form class="row">
                             <div class="col-md-6">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="placeholder_name">
+
+                                       data-i18n-placeholder="placeholder_name"
+                                       name="name">
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="placeholder_name">
+
+                                       data-i18n-placeholder="placeholder_tell"
+                                       name="phone">
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="placeholder_people">
+                                       data-i18n-placeholder="placeholder_people"
+                                       name="people"
+                                       >
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="placeholder_time">
+                                       data-i18n-placeholder="placeholder_time"
+                                       name="time">
                             </div>
                             <div class="col-md-6">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="contact__address">
+                                       data-i18n-placeholder="contact__address"
+                                       name="address">
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Code">
+                                <input type="text" class="form-control" placeholder="Code" name="code">
                             </div>
                             <div class="col-md-12">
                                 <input type="text" class="form-control" data-i18n
-                                       data-i18n-placeholder="placeholder_remarks">
+                                       data-i18n-placeholder="placeholder_remarks"
+                                       name="remark">
                             </div>
                         </form>
                     </div><!-- /.cart__shiping -->
@@ -196,10 +205,10 @@
                     <div class="cart__total-amount">
                         <h6 data-i18n="pay_information"></h6>
                         <ul class="list-unstyled mb-0">
-                            <li><span>paynow</span><span>$ 140.00</span></li>
+                            <li><span>paynow</span><span id="paynow_total"></span></li>
                         </ul>
                         <div class="col-md-12">
-                            <button type="submit" class="btn btn__secondary btn__block" data-i18n="submit">Update
+                            <button type="button" class="btn btn__secondary btn__block" data-i18n="submit" onclick="addOrder()">Update
                                 Totals
                             </button>
                         </div>

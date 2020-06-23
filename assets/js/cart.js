@@ -137,31 +137,6 @@ function cartShow() {
     console.log(cart_info)
     console.log(cart_info.num)
     $(".count-style").html(cart_info.num);
-    var list = cart_info.list
-    var cartHtml = ""
-    var name = ""
-    Object.keys(list).forEach(function (key) {
-
-        if (lang == 'en') {
-            name = list[key].name_en
-        } else {
-            name = list[key].name
-        }
-        cartHtml += '<li class="single-shopping-cart">\n' +
-            '\t\t\t\t\t                    <div class="shopping-cart-img">\n' +
-            '\t\t\t\t\t                        <a href=""><img alt="" src="' + list[key].img + '"></a>\n' +
-            '\t\t\t\t\t                        <div class="item-close">\n' +
-            '\t\t\t\t\t                            <a href=""><i class="sli sli-close"></i></a>\n' +
-            '\t\t\t\t\t                        </div>\n' +
-            '\t\t\t\t\t                    </div>\n' +
-            '\t\t\t\t\t                    <div class="shopping-cart-title">\n' +
-            '\t\t\t\t\t                        <h4><a href="">' + name + '</a></h4>\n' +
-            '\t\t\t\t\t                        <span>' + list[key].num + ' x ' + list[key].money / 100 + '</span>\n' +
-            '\t\t\t\t\t                    </div>\n' +
-            '\t\t\t\t\t                </li> '
-    });
-    $("#cart-list").html(cartHtml);
-    $("#cart-money").html("$" + cart_info.money / 100);
 }
 
 //商品飞入购物车动画

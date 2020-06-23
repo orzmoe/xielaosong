@@ -1463,7 +1463,7 @@ h6 {
 
 .btn__primary {
   background-color:#f34949;
-  color: #ffffff;
+  color: #ffffff!important;
   border: 2px solid#f34949; 
 }
 
@@ -6978,4 +6978,17 @@ textarea.form-control {
   .about .ml-30 {
     margin-left: 0 !important;
   }
+}
+ .count-style {
+  position: absolute;
+  right: 3px;
+  top: 8px;
+  background-color: #fff;
+  color: #000;
+  font-size: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 100%;
 }
